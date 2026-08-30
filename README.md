@@ -21,17 +21,22 @@ movies using TMDB's built-in recommendation engine.
 - A free TMDB API key ([get one here](https://www.themoviedb.org/settings/api))
 - The `requests` library
 
-## **MARKDOWN**
-[User inputs movie title] 
+## **Markdown**
+[User Input]
+User enters a movie title in the Streamlit web app.
        │
-       ▼
-[API Search: Get Movie ID & Genres] 
+       ▼ (Sends HTTP GET Request)
+[API Data Fetch]
+App sends the title to TMDB API to get the unique Movie ID.
        │
-       ▼
-[API Recommendations: Fetch similar movies via TMDB algorithm] 
+       ▼ (Requests Similar Movies)
+[Recommendation Engine]
+TMDB API finds related movies using genres and keywords.
        │
-       ▼
-[UI Display: Show posters, overviews, and ratings in Streamlit]
+       ▼ (Unpacks Top 5 Results)
+[UI Display]
+Streamlit displays movie titles, ratings, and posters.
+
 
 ## Setup
 
