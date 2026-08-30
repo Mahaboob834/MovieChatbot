@@ -24,16 +24,25 @@ movies using TMDB's built-in recommendation engine.
 ## **Markdown**
 [User Input]
 User enters a movie title in the Streamlit web app.
-       │
-       ▼ (Sends HTTP GET Request)
+
+          |
+
+          V
+          
 [API Data Fetch]
 App sends the title to TMDB API to get the unique Movie ID.
-       │
-       ▼ (Requests Similar Movies)
+
+          |
+
+          V
+          
 [Recommendation Engine]
 TMDB API finds related movies using genres and keywords.
-       │
-       ▼ (Unpacks Top 5 Results)
+
+          |
+
+          V
+          
 [UI Display]
 Streamlit displays movie titles, ratings, and posters.
 
