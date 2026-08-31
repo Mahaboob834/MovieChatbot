@@ -1,62 +1,82 @@
-# 🎬 Movie Buddy
 
-A friendly movie recommendation chatbot that uses [The Movie Database (TMDB)](https://www.themoviedb.org/) API to suggest similar movies based on a title you like. Available as both a web chat interface and a Python CLI script.
+# 🎬 Movie Recommendation Chatbot
+
+A simple Python chatbot that takes a movie title from the user, looks it up on
+[The Movie Database (TMDB)](https://www.themoviedb.org/), and suggests similar
+movies using TMDB's built-in recommendation engine.
 
 ## Open in Google Colab
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1WczpQfHg7EqOo7xX24q67fJ87XaLzm1r?usp=sharing)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/movie_chatbot.ipynb)
+
+> Replace `YOUR_USERNAME/YOUR_REPO` with your actual GitHub username and repo
+> name once uploaded. If you upload the `.py` file instead of a notebook, this
+> badge won't work — see "Using this as a Notebook" below for how to make a
+> matching `.ipynb`.
 
 ## Features
 
-- 🔍 Search for any movie by title
-- 🍿 Get up to 5 similar movie recommendations powered by TMDB's recommendation engine
-- 💬 Clean, chat-style web UI with a typing indicator
-- 🐍 Lightweight Python CLI version for terminal use
+- Searches for a movie by name using the TMDB API
+- Retrieves TMDB's own list of recommended similar movies
+- Simple command-line / interactive chatbot interface
 
-## Demo
+## Requirements
 
-Type a movie you enjoyed (e.g. `Inception`) and Movie Buddy will reply with a handful of similar titles pulled from TMDB.
+- Python 3.7+
+- A free TMDB API key ([get one here](https://www.themoviedb.org/settings/api))
+- The `requests` library
 
-## Project Structure
+## Setup
 
-```
-.
-├── index.html          # Chat UI markup
-├── style.css            # Chat UI styling
-├── movie_chatbot.py      # Python CLI version
-└── README.md
-```
+1. **Clone this repository**
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+   cd YOUR_REPO
+   ```
 
-## Getting Started
-
-### Python CLI Version
-
-1. Install dependencies:
+2. **Install dependencies**
    ```bash
    pip install requests
    ```
-2. Run the script:
+
+3. **Set your TMDB API key as an environment variable**
+
+   Don't hardcode your API key in the script — it's much safer to keep it
+   out of files you upload to GitHub.
+
+   ```bash
+   # macOS / Linux
+   export TMDB_API_KEY="your_api_key_here"
+
+   # Windows (PowerShell)
+   $env:TMDB_API_KEY="your_api_key_here"
+   ```
+
+4. **Run the chatbot**
    ```bash
    python movie_chatbot.py
    ```
-3. Enter a movie title when prompted.
 
-]
+## Using this in Google Colab
 
-## How It Works
+If you'd rather run it in Colab instead of locally:
 
-1. The user enters a movie title.
-2. The app searches TMDB for the closest matching title (`/search/movie`).
-3. It fetches TMDB's built-in recommendations for that movie's ID (`/movie/{id}/recommendations`).
-4. The top results are displayed as a list of suggested titles.
+1. Upload `movie_chatbot.py` to a Colab notebook, or copy its contents into a cell.
+2. In a Colab cell, set your API key using Colab's secrets manager (recommended)
+   or an environment variable:
+   ```python
+   import os
+   os.environ["TMDB_API_KEY"] = "your_api_key_here"  # or use Colab Secrets
+   ```
+3. Run the cell containing the chatbot code.
 
-## Tech Stack
+## ⚠️ A note on API keys and GitHub
 
-- HTML / CSS / vanilla JavaScript (web version)
-- Python + [`requests`](https://pypi.org/project/requests/) (CLI version)
-- [TMDB API](https://developer.themoviedb.org/docs)
-
+Never commit real API keys to a public GitHub repository. If a key has
+already been shared or exposed, regenerate it from your
+[TMDB account settings](https://www.themoviedb.org/settings/api) so the old
+one stops working.
 
 ## License
 
-This project is provided as-is for personal/educational use. Movie data is provided by [TMDB](https://www.themoviedb.org/) — this product uses the TMDB API but is not endorsed or certified by TMDB.
+Feel free to use and modify this project for personal or educational purposes.
