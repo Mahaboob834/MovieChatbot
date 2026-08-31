@@ -7,12 +7,8 @@ movies using TMDB's built-in recommendation engine.
 
 ## Open in Google Colab
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/YOUR_REPO/blob/main/movie_chatbot.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1WczpQfHg7EqOo7xX24q67fJ87XaLzm1r?usp=sharing)
 
-> Replace `YOUR_USERNAME/YOUR_REPO` with your actual GitHub username and repo
-> name once uploaded. If you upload the `.py` file instead of a notebook, this
-> badge won't work — see "Using this as a Notebook" below for how to make a
-> matching `.ipynb`.
 
 ## Features
 
@@ -39,18 +35,7 @@ movies using TMDB's built-in recommendation engine.
    pip install requests
    ```
 
-3. **Set your TMDB API key as an environment variable**
 
-   Don't hardcode your API key in the script — it's much safer to keep it
-   out of files you upload to GitHub.
-
-   ```bash
-   # macOS / Linux
-   export TMDB_API_KEY="your_api_key_here"
-
-   # Windows (PowerShell)
-   $env:TMDB_API_KEY="your_api_key_here"
-   ```
 
 4. **Run the chatbot**
    ```bash
@@ -70,12 +55,6 @@ If you'd rather run it in Colab instead of locally:
    ```
 3. Run the cell containing the chatbot code.
 
-## ⚠️ A note on API keys and GitHub
-
-Never commit real API keys to a public GitHub repository. If a key has
-already been shared or exposed, regenerate it from your
-[TMDB account settings](https://www.themoviedb.org/settings/api) so the old
-one stops working.
 
 ## License
 
