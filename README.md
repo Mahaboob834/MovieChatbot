@@ -2,7 +2,9 @@
 
 A friendly movie recommendation chatbot that uses [The Movie Database (TMDB)](https://www.themoviedb.org/) API to suggest similar movies based on a title you like. Available as both a web chat interface and a Python CLI script.
 
+## Open in Google Colab
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1WczpQfHg7EqOo7xX24q67fJ87XaLzm1r?usp=sharing)
 
 ## Features
 
