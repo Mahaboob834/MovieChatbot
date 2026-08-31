@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 640px;
+}
+
+.chat-header {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.chat-header h1 {
+  margin: 0 0 4px;
+  font-size: 24px;
+}
+
+.chat-header p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.chat-window {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: #f4f4f8;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: #eaeaf2;
+  color: #222;
+  border-bottom-left-radius: 4px;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #dd2476;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+.message.typing {
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.rec-list {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.rec-list li {
+  margin-bottom: 4px;
+}
+
+.chat-input-area {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #e0e0e0;
+  background: #fff;
+  gap: 8px;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.chat-input-area input:focus {
+  border-color: #dd2476;
+}
+
+.chat-input-area button {
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: #fff;
+  border: none;
+  padding: 0 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.chat-input-area button:hover {
+  opacity: 0.9;
+}
